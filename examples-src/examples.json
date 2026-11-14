@@ -1,0 +1,128 @@
+[
+ {
+  "id": "oled_hello",
+  "title": "OLED 128x64 (SSD1306, I2C2): hello + uptime",
+  "file": "oled_hello.c",
+  "circuit": {
+   "parts": [
+    {
+     "id": "oled1",
+     "type": "oled",
+     "x": 340,
+     "y": 200,
+     "attrs": {
+      "color": "white",
+      "i2c-address": "0x3C",
+      "height": "64"
+     }
+    }
+   ],
+   "wires": [
+    [
+     "oled1:GND",
+     "bluepill:GND.3",
+     "black"
+    ],
+    [
+     "oled1:VCC",
+     "bluepill:3V3.2",
+     "red"
+    ],
+    [
+     "oled1:SCL",
+     "bluepill:PB10",
+     "green"
+    ],
+    [
+     "oled1:SDA",
+     "bluepill:PB11",
+     "blue"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "oled_anim",
+  "title": "OLED 128x64: animation at 400 kHz (fast mode)",
+  "file": "oled_anim.c",
+  "circuit": {
+   "parts": [
+    {
+     "id": "oled1",
+     "type": "oled",
+     "x": 340,
+     "y": 200,
+     "attrs": {
+      "color": "dual",
+      "i2c-address": "0x3C",
+      "height": "64"
+     }
+    }
+   ],
+   "wires": [
+    [
+     "oled1:GND",
+     "bluepill:GND.3",
+     "black"
+    ],
+    [
+     "oled1:VCC",
+     "bluepill:3V3.2",
+     "red"
+    ],
+    [
+     "oled1:SCL",
+     "bluepill:PB10",
+     "green"
+    ],
+    [
+     "oled1:SDA",
+     "bluepill:PB11",
+     "blue"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "i2c_scan",
+  "title": "I2C scanner for I2C1 + I2C2 (Serial Monitor)",
+  "file": "i2c_scan.c",
+  "circuit": {
+   "parts": [
+    {
+     "id": "oled1",
+     "type": "oled",
+     "x": 340,
+     "y": 200,
+     "attrs": {
+      "color": "white",
+      "i2c-address": "0x3C",
+      "height": "64"
+     }
+    }
+   ],
+   "wires": [
+    [
+     "oled1:GND",
+     "bluepill:GND.3",
+     "black"
+    ],
+    [
+     "oled1:VCC",
+     "bluepill:3V3.2",
+     "red"
+    ],
+    [
+     "oled1:SCL",
+     "bluepill:PB10",
+     "green"
+    ],
+    [
+     "oled1:SDA",
+     "bluepill:PB11",
+     "blue"
+    ]
+   ]
+  }
+ }
+]
